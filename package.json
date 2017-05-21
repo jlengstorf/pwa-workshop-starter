@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "del dist",
+    "clean": "del 'dist/*' '!dist/.git'",
     "build": "yarn run clean && yarn run build:css && yarn run build:js && yarn run build:html && yarn run build:img && yarn run build:thumbs",
     "build:css": "postcss -c postcss.config.js -o dist/assets/css/main.css src/css/main.css",
     "build:js": "webpack --config webpack.config.js",
