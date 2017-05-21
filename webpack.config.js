@@ -1,5 +1,4 @@
 const path = require('path');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
   entry: './src/js/main.js',
