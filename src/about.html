@@ -67,10 +67,13 @@
       <a class="lightbox__close-btn" href="#close">close</a>
     </div>
 
-    <script src="assets/js/main.js"></script>
     <script>
-      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-      ':35729/livereload.js?snipver=1"></' + 'script>')
+      (function() {
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('./service-worker.js');
+        }
+      })();
     </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
