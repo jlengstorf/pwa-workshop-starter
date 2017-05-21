@@ -34,7 +34,11 @@ module.exports = {
         staticFileGlobs: [
           'dist/assets/js/main.js',
           'dist/assets/css/main.css',
-          'dist/*.*',
+          'dist/*.html',
+          'dist/*.png',
+          'dist/*.xml',
+          'dist/*.ico',
+          'dist/*.svg',
         ],
         stripPrefix: 'dist/',
       }
