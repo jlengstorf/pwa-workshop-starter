@@ -28,11 +28,12 @@
 
 .js--lazyload {
   height: 80px;
-  min-width: 150px;
+  min-width: 100px;
   background: color(var(--color-text) alpha(0.05));
 
   @media (min-width: 750px) {
     height: 120px;
+    min-width: 150px;
   }
 
   img {
