@@ -1,5 +1,8 @@
 const path = require('path');
 
+// We’ll use this later.
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+
 module.exports = {
   entry: './src/js/main.js',
   output: {
@@ -15,7 +18,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env'],
+            presets: ['env', 'es2015'],
           },
         },
       },

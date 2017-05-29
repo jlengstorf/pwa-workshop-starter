@@ -4,7 +4,7 @@ const tabContainer = document.querySelector(`.${TAB_CONTAINER_CLASS}`);
 const tabs = tabContainer.querySelectorAll('a');
 const panels = document.querySelectorAll('[aria-labelled-by^="tab-"]');
 
-export default function({ onChange = () => {} }) {
+export default function({ onChange = () => {/* no-op by default */} }) {
   tabContainer.addEventListener('click', (event) => {
     if (event.target.tagName.toLowerCase() === 'a') {
       event.preventDefault();
