@@ -1,4 +1,6 @@
 const path = require('path');
+
+// We’ll use this later.
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
@@ -22,26 +24,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new SWPrecacheWebpackPlugin(
-      {
-        cacheId: 'pwa-workshop-starter-v1',
-        filepath: './dist/service-worker.js',
-        runtimeCaching: [{
-          urlPattern: /[.]jpg$/,
-          handler: 'cacheFirst'
-        }],
-        staticFileGlobs: [
-          'dist/assets/js/main.js',
-          'dist/assets/css/main.css',
-          'dist/*.html',
-          'dist/*.png',
-          'dist/*.xml',
-          'dist/*.ico',
-          'dist/*.svg',
-        ],
-        stripPrefix: 'dist/',
-      }
-    ),
-  ],
+  plugins: [],
 };
