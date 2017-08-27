@@ -84,6 +84,10 @@ var contentArea = document.querySelector('.' + LIGHTBOX_WRAPPER_CLASS);
 var lightbox = document.querySelector('.' + LIGHTBOX_CLASS);
 
 exports.default = function () {
+  if (!contentArea) {
+    return;
+  }
+
   contentArea.addEventListener('click', function (event) {
     if (event.target.classList.contains(LIGHTBOX_IMG_LINK_CLASS)) {
       var link = event.target.parentNode;
@@ -121,7 +125,13 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function (_ref) {
   var _ref$onChange = _ref.onChange,
-      onChange = _ref$onChange === undefined ? function () {/* no-op by default */} : _ref$onChange;
+      onChange = _ref$onChange === undefined ? function () {
+    /* no-op by default */
+  } : _ref$onChange;
+
+  if (!tabContainer || !tabs || !panels) {
+    return;
+  }
 
   tabContainer.addEventListener('click', function (event) {
     if (event.target.tagName.toLowerCase() === 'a') {
@@ -150,7 +160,7 @@ exports.default = function (_ref) {
 var TAB_CONTAINER_CLASS = 'js--tabs';
 
 var tabContainer = document.querySelector('.' + TAB_CONTAINER_CLASS);
-var tabs = tabContainer.querySelectorAll('a');
+var tabs = tabContainer && tabContainer.querySelectorAll('a');
 var panels = document.querySelectorAll('[aria-labelled-by^="tab-"]');
 
 /***/ }),

@@ -37,8 +37,8 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["about.html","1b21190db6c6db8867ae9e973a29b713"],["android-chrome-192x192.png","5a61d303c93ddd3c543ce2135bf5911e"],["android-chrome-256x256.png","b71176a279547250190b2f45828b869b"],["apple-touch-icon.png","b90dc59dbeb942956facaba1b3ac0189"],["assets/css/main.css","5f6108cdcee370fac49673c845f96ec8"],["assets/js/main.js","5d11b92019623434c3380a1cc3fba919"],["browserconfig.xml","a493ba0aa0b8ec8068d786d7248bb92c"],["favicon-16x16.png","e59744bed362fa5a2e599aecac829447"],["favicon-32x32.png","d0efd8655b7a89bc5c8fdf442ef0c52c"],["favicon.ico","7632fea9b8e4e62d8486cf78d5afab81"],["index.html","a5abbb895c129b1b7eff88fcc26464ab"],["mstile-150x150.png","aa031100fe26ccf01525720a2f225569"],["safari-pinned-tab.svg","800f5dc8822f19218c28a91a75ad6103"],["splash-512x512.png","34ed2e131c8bcd45d753fbe127eb9265"]];
-var cacheName = 'sw-precache-v3-pwa-workshop-starter-v1-' + (self.registration ? self.registration.scope : '');
+var precacheConfig = [["about.html","b7776c8ca02eac3e25ef77a89cf915fc"],["android-chrome-192x192.png","a0eac7220ce9cb461370fa35ca30a660"],["android-chrome-512x512.png","ecc4cd12af8dfc289300116196e006e9"],["apple-touch-icon.png","c84ff8103d371555ec79ac7e0c51ccf7"],["assets/css/main.css","5f6108cdcee370fac49673c845f96ec8"],["assets/js/main.js","193898d14b05880d9fdee53f81894dae"],["browserconfig.xml","b1bab372bb92ec76c1121a033bb48472"],["favicon-16x16.png","6e1012f57a3ee5964542627120d6a2c1"],["favicon-32x32.png","464577597573bc84ed6dd45bc9e9d554"],["favicon.ico","92e258a80c4535139183104af3065f5f"],["index.html","2a1d3824b681ae51244e692550e4683c"],["mstile-150x150.png","3e9f5163ce0c5988c3d43a0dbfb00cfe"],["safari-pinned-tab.svg","d6eae0e3bc701fd343ccb957723366b8"]];
+var cacheName = 'sw-precache-v3-sw-precache-webpack-plugin-' + (self.registration ? self.registration.scope : '');
 
 
 var ignoreUrlParametersMatching = [/^utm_/];
