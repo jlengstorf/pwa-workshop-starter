@@ -1,25 +1,20 @@
 {
-    "name": "PWA Workshop",
-    "short_name": "PWA Workshop",
-    "start_url": ".",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-256x256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "/splash-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "name": "Progressive Web App Demo for Web Summer Camp 2017",
+  "short_name": "#websc PWA",
+  "start_url": "./index.html",
+  "theme_color": "#663399",
+  "background_color": "#faf8fd",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }

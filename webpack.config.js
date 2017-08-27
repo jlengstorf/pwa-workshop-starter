@@ -23,25 +23,19 @@ module.exports = {
     ],
   },
   plugins: [
-    new SWPrecacheWebpackPlugin(
-      {
-        cacheId: 'pwa-workshop-starter-v1',
-        filepath: './dist/service-worker.js',
-        runtimeCaching: [{
+    new SWPrecacheWebpackPlugin({
+      filepath: './dist/service-worker.js',
+      runtimeCaching: [
+        {
           urlPattern: /[.]jpg$/,
-          handler: 'cacheFirst'
-        }],
-        staticFileGlobs: [
-          'dist/assets/js/main.js',
-          'dist/assets/css/main.css',
-          'dist/*.html',
-          'dist/*.png',
-          'dist/*.xml',
-          'dist/*.ico',
-          'dist/*.svg',
-        ],
-        stripPrefix: 'dist/',
-      }
-    ),
+          handler: 'cacheFirst',
+        },
+      ],
+      staticFileGlobs: [
+        'dist/assets/{css,js}/main.{css,js}',
+        'dist/*.{html,png,xml,ico,svg}',
+      ],
+      stripPrefix: 'dist/',
+    }),
   ],
 };

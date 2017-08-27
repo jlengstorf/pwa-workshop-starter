@@ -6,7 +6,11 @@ const contentArea = document.querySelector(`.${LIGHTBOX_WRAPPER_CLASS}`);
 const lightbox = document.querySelector(`.${LIGHTBOX_CLASS}`);
 
 export default () => {
-  contentArea.addEventListener('click', (event) => {
+  if (!contentArea) {
+    return;
+  }
+
+  contentArea.addEventListener('click', event => {
     if (event.target.classList.contains(LIGHTBOX_IMG_LINK_CLASS)) {
       const link = event.target.parentNode;
 
@@ -22,7 +26,7 @@ export default () => {
     }
   });
 
-  lightbox.addEventListener('click', (event) => {
+  lightbox.addEventListener('click', event => {
     if (!event.target.classList.contains(`${LIGHTBOX_CLASS}__image`)) {
       event.preventDefault();
       lightbox.classList.add(`${LIGHTBOX_CLASS}--disabled`);
